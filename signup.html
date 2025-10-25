@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  /* Logo outside container */
+  .logo {
+    width: 75px;
+    margin-bottom: 25px;
+   margin-right: 800px;
+  }
+
+  .login-container {
+    display: flex;
+    width: 90%;
+    max-width: 1100px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+
+  /* Left Side - Image */
+  .login-image {
+    flex: 1;
+    background: url('image/Rectangle 39.png') center/cover no-repeat;
+   
+  }
+
+  /* Right Side - Form */
+  .login-form {
+    flex: 1;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .login-form h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+    color: black;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: none;
+  }
+  .forgot-password {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .forgot-password a {
+    color: #737679;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .forgot-password a:hover {
+    text-decoration: underline;
+  }
+
+  button {
+    width: 30%;
+    background-color: #0078d4;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 35%;
+  }
+
+  button:hover {
+    background-color: #005fa3;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .login-container {
+      flex-direction: column;
+      width: 95%;
+    }
+
+    .login-image {
+      height: 200px;
+    }
+
+    .login-form {
+      padding: 30px 20px;
+    }
+
+    .logo {
+      width: 90px;
+    }
+  }
+  #termsCheckbox {
+  accent-color: #0078d4; /* Style the checkbox to match button color */
+}
+
+/* Link inside terms */
+label a {
+  color: #0078d4;
+  text-decoration: none;
+}
+
+label a:hover {
+  text-decoration: underline;
+}
+
+/* Space between confirm password and checkbox */
+#confirmPassword {
+  margin-bottom: 8px;
+  margin-right: 100px;
+}
+</style>
+</head>
+<body>
+
+<!-- Logo Outside Container -->
+ <a href="index.html">
+<img src="image/logo-removebg-preview (2).png" alt="Logo" class="logo"></a>
+
+<div class="login-container">
+  <!-- Left Side - Image -->
+  <div class="login-image"></div>
+
+  <!-- Right Side - Form -->
+  <div class="login-form">
+    <h2 style="text-align: center;">Sign up</h2>
+   <form id="loginForm" novalidate>
+    <label for="username">Username</label>
+<input type="text" id="username" placeholder="Enter your username">
+<div id="usernameError" class="error">Please enter your username.</div>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email address" required>
+       <div id="emailError" class="error">Please enter a valid email address.</div>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password" required>
+       <div id="passwordError" class="error">Please enter your password.</div>
+       <label for="confirmPassword">Confirm Password</label>
+<input type="password" id="confirmPassword" placeholder="Confirm your password">
+<div id="confirmPasswordError" class="error">Passwords do not match.</div>
+
+   <div style="margin: 15px 0;">
+  <label style="font-weight: normal;">
+    <input type="checkbox" id="termsCheckbox" style="margin-right: 8px;">
+    I have read and agree to the <a href="#" style="color: #0078d4; text-decoration: none;">Terms of Service</a>.
+  </label>
+  <div id="termsError" class="error">You must agree to the Terms of Service.</div>
+</div>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</div>
+<script>
+ const username = document.getElementById("username");
+const confirmPassword = document.getElementById("confirmPassword");
+const termsCheckbox = document.getElementById("termsCheckbox");
+
+const usernameError = document.getElementById("usernameError");
+const confirmPasswordError = document.getElementById("confirmPasswordError");
+const termsError = document.getElementById("termsError");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+  let valid = true;
+
+  // Username validation
+  if (username.value.trim() === "") {
+    usernameError.style.display = "block";
+    valid = false;
+  } else {
+    usernameError.style.display = "none";
+  }
+
+  // Email validation
+  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  if (!email.value.match(emailPattern)) {
+    emailError.style.display = "block";
+    valid = false;
+  } else {
+    emailError.style.display = "none";
+  }
+
+  // Password validation
+  if (password.value.trim() === "") {
+    passwordError.style.display = "block";
+    valid = false;
+  } else {
+    passwordError.style.display = "none";
+  }
+
+  // Confirm password match
+  if (confirmPassword.value !== password.value || confirmPassword.value.trim() === "") {
+    confirmPasswordError.style.display = "block";
+    valid = false;
+  } else {
+    confirmPasswordError.style.display = "none";
+  }
+
+  // Terms checkbox
+  if (!termsCheckbox.checked) {
+    termsError.style.display = "block";
+    valid = false;
+  } else {
+    termsError.style.display = "none";
+  }
+
+  // Final success action
+  if (valid) {
+    alert("Login successful!");
+    form.reset();
+  }
+});
+</script>
+</body>
+</html>

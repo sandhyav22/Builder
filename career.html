@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .card-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card i {
+  font-size: 60px;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 1.4rem;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.card button {
+  background-color: #1a237e;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card button:hover {
+  background-color: #3949ab;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+    </style>
+ 
+    </head>
+<body>
+    
+<nav>
+  <!-- Left: Logo -->
+  <div class="logo">
+    <a href="index.html">
+    <img src="image/logo.png" alt="Logo"></a>
+    
+  </div>
+
+  <!-- Menu Icon (for mobile) -->
+  <div class="menu-icon" id="menu-icon">☰</div>
+
+  <div class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="project.html">Projects</a>
+    <a href="career.html">Career</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+  <!-- Right: Login/Signup -->
+  <div class="nav-right">
+    <a href="login.html">Login</a> <span style="color:white;">/</span>
+    <a href="signup.html">Signup</a>
+  
+  </div>
+</nav>
+
+<br>
+
+<section class="banner2">
+  <div class="overlay1">
+    <div class="banner-content1">
+      <p style="color: yellow;text-align: left;">Success Path</p>
+      <h1>Build You Career</h1>
+      <p style="text-align: right;">Your Future begins Here!</p>
+      
+    </div>
+  </div>
+</section>
+<br>
+<section class="carrer">
+    <h1>Create Your Destiny with<br>
+    <span style="font-weight: bold;">Magizh Builders</span></h1>
+    <p>Join us to Craft homes and create lasting impression. Explore current openings<br>
+    grow with us today.</p>
+    <h1>HR</h1>
+    <h1>Vasanth Kumar</h1>
+</section>
+<br>
+<section class="card-section">
+  <div class="card">
+    <i class="fas fa-user-circle"></i>
+    <h2>Admin</h2>
+    <p>Chennai</p>
+   <button onclick="openForm()">Apply Now</button>
+  </div>
+
+  <div class="card">
+    <i class="fas fa-user-circle"></i>
+    <h2>Digital & Marketing</h2>
+    <p>Chennai</p>
+    <button onclick="openForm()">Apply Now</button>
+  </div>
+</section>
+
+<section class="card-section">
+  <div class="card">
+    <i class="fas fa-user-circle"></i>
+    <h2>Civil Engineer</h2>
+    <p>Chennai</p>
+    <button onclick="openForm()">Apply Now</button>
+  </div>
+
+  <div class="card">
+    <i class="fas fa-user-circle"></i>
+    <h2>Quality Surveyor</h2>
+    <p>Chennai</p>
+    <button onclick="openForm()">Apply Now</button>
+  </div>
+</section>
+
+
+<section class="card-section">
+  <div class="card">
+    <i class="fas fa-user-circle"></i>
+    <h2>Human Resources</h2>
+    <p>Chennai</p>
+    <button onclick="openForm()">Apply Now</button>
+  </div>
+
+  <div class="card">
+    <i class="fas fa-user-circle"></i>
+    <h2>Other</h2>
+    <p>Chennai</p>
+    <button onclick="openForm()">Apply Now</button>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="image-grid-section">
+  <div class="grid">
+    <!-- Column 1 -->
+    <div class="col">
+      <img src="image/0eb4b8fe077c9dd8e6e3449234405ab2.jpg" alt="Image 1">
+      <img src="image/OIP (1).jfif" alt="Image 2">
+    </div>
+
+    <!-- Column 2 -->
+    <div class="col second-col">
+      <img src="image/OIP.jfif" alt="Image 3" class="top-gap">
+      <img src="image/team3.jpg" alt="Image 4">
+    </div>
+
+    <!-- Column 3 -->
+    <div class="col content-col">
+      <div class="text-content">
+        <h2>Make your Dreams<br>Fulfill</h2>
+        <p>Celebrating milestones, sharing moments.<br>Explore the media stories that highlight<br>
+        our journey of excellence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+ <div class="modal" id="applicationForm">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeForm()">&times;</span>
+      <h2>Application Form</h2>
+      <form>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+
+        <label for="resume">Upload Resume</label>
+        <input type="file" id="resume" accept=".pdf,.doc,.docx" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="3"></textarea>
+
+        <button type="submit">Submit Application</button>
+      </form>
+    </div>
+  </div>
+    <div class="success-message" id="successMsg">
+    🎉 Application Submitted Successfully!
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<footer class="footer">
+  <!-- Column 1: Logo and Name -->
+  <div class="footer-column">
+    <div class="footer-logo">
+      <img src="image/logo.png" alt="Magizh Builders Logo">
+      <h2>Magizh Builders</h2>
+    </div>
+  </div>
+
+  <!-- Column 2: Pricing -->
+  <div class="footer-column">
+    <h4>Pricing</h4>
+    <a href="#">About</a>
+    <a href="#">Add Properties</a>
+  </div>
+
+  <!-- Column 3: Legal -->
+  <div class="footer-column">
+    <h4>Legal</h4>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Licence agreement</a>
+    <a href="#">Terms of use</a>
+    <a href="#">Cookie Policy</a>
+  </div>
+
+  <!-- Column 4: Contact -->
+  <div class="footer-column">
+    <h4>Get In Touch</h4>
+    <div class="contact-item">
+      <i class="fas fa-map-marker-alt"></i>
+      39, Kodambakkam Road,<br>Ethirj Nagar, West Mambalam,<br>Chennai - 600033, Tamilnadu, India.
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-phone-alt"></i>
+      +91 123 456 789
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      Info@magizhbuilders.com
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>

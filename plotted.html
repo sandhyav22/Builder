@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plotted</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <style>
+        .property-card {
+  width: 1000px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  font-family: "Segoe UI", sans-serif;
+  margin: 20px auto;
+  position: relative;
+}
+
+/* Image */
+.image-container img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Details section */
+.property-details {
+  padding: 16px 20px;
+  position: relative;
+}
+
+.property-details h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.property-details p {
+  margin: 8px 0;
+  color: #333;
+  font-size: 15px;
+}
+
+/* Status badge */
+.status {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  display: inline-flex;
+  align-items: center;
+  background: #f2f2f2;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #006b2d; /* Green color */
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+/* 🌐 Responsive Design */
+@media (max-width: 768px) {
+  .property-card {
+    width: 95%;
+  }
+
+  .image-container img {
+    height: 250px;
+  }
+
+  .property-details h3 {
+    font-size: 18px;
+  }
+
+  .status {
+    position: static;
+    margin-top: 10px;
+    display: inline-block;
+  }
+}
+     </style>
+  </head>
+<body>
+    
+<nav>
+  <!-- Left: Logo -->
+  <div class="logo">
+    <a href="index.html">
+    <img src="image/logo.png" alt="Logo"></a>
+    
+  </div>
+
+  <!-- Menu Icon (for mobile) -->
+  <div class="menu-icon" id="menu-icon">☰</div>
+
+  <!-- Center: Navigation links -->
+ <div class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="project.html">Projects</a>
+    <a href="career.html">Career</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+  <!-- Right: Login/Signup -->
+  <div class="nav-right">
+    <a href="login.html">Login</a> <span style="color:white;">/</span>
+    <a href="signup.html">Signup</a>
+  
+  </div>
+</nav>
+<br>
+
+  <section class="banner3">
+    <h1>Our Projects<br>
+    Plotted Development</h1>
+  </section>
+<br>
+
+
+
+<div class="property-card">
+  <div class="image-container">
+    <img src="image/202505200430-202505200428-kg-new-resize5 (1).jpg" alt="Property View">
+  </div>
+
+  <div class="property-details">
+    <h3>Muttukadu ECR</h3>
+    <p>945–1246 Sq.ft</p>
+    <div class="status">
+      <span class="dot"></span> Ongoing
+    </div>
+  </div>
+</div>
+
+
+
+<br>
+<div class="property-card">
+  <div class="image-container">
+    <img src="image/202505200423-kg-new-resize4.jpg" alt="Property View">
+  </div>
+
+  <div class="property-details">
+    <h3>Thiruvottiyur</h3>
+    <p>666–1246 Sq.ft</p>
+    <div class="status">
+      <span class="dot"></span> Ready to Construct
+    </div>
+  </div>
+</div>
+<br>
+<div class="property-card">
+  <div class="image-container">
+    <img src="image/202505080529-1200x570-banner-koj.jpg" alt="Property View">
+  </div>
+
+  <div class="property-details">
+    <h3>Valapuram</h3>
+    <p>626–3046 Sq.ft</p>
+    <div class="status">
+      <span class="dot"></span> Completed
+    </div>
+  </div>
+</div>
+
+
+
+<br>
+
+<footer class="footer">
+  <!-- Column 1: Logo and Name -->
+  <div class="footer-column">
+    <div class="footer-logo">
+      <img src="image/logo.png" alt="Magizh Builders Logo">
+      <h2>Magizh Builders</h2>
+    </div>
+  </div>
+
+  <!-- Column 2: Pricing -->
+  <div class="footer-column">
+    <h4>Pricing</h4>
+    <a href="#">About</a>
+    <a href="#">Add Properties</a>
+  </div>
+
+  <!-- Column 3: Legal -->
+  <div class="footer-column">
+    <h4>Legal</h4>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Licence agreement</a>
+    <a href="#">Terms of use</a>
+    <a href="#">Cookie Policy</a>
+  </div>
+
+  <!-- Column 4: Contact -->
+  <div class="footer-column">
+    <h4>Get In Touch</h4>
+    <div class="contact-item">
+      <i class="fas fa-map-marker-alt"></i>
+      39, Kodambakkam Road,<br>Ethirj Nagar, West Mambalam,<br>Chennai - 600033, Tamilnadu, India.
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-phone-alt"></i>
+      +91 123 456 789
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      Info@magizhbuilders.com
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
